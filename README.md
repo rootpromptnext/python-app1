@@ -138,7 +138,7 @@ pip freeze > requirements.txt
 ```
 
 # Export vars before running app:
-
+```
 export DB_HOST=localhost
 export DB_USER=crudapp
 export DB_PASS=StrongPass@123
