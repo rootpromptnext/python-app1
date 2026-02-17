@@ -147,7 +147,7 @@ export DB_NAME=crud_demo
 
 # Run Application
 
-```bash
+```
 python app.py
 ```
 
