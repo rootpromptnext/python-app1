@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="d-flex justify-content-between mb-3">
+    <h3>Student List</h3>
+    <a href="/add" class="btn btn-primary">Add Student</a>
+</div>
+
+<table class="table table-bordered table-striped shadow">
+<thead class="table-dark">
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Course</th>
+    <th>Action</th>
+</tr>
+</thead>
+<tbody>
+{% for student in students %}
+<tr>
+    <td>{{ student[0] }}</td>
+    <td>{{ student[1] }}</td>
+    <td>{{ student[2] }}</td>
+    <td>{{ student[3] }}</td>
+    <td>
+        <a href="/edit/{{ student[0] }}" class="btn btn-warning btn-sm">Edit</a>
+        <a href="/delete/{{ student[0] }}" class="btn btn-danger btn-sm"
+           onclick="return confirm('Are you sure?')">Delete</a>
+    </td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+{% endblock %}
